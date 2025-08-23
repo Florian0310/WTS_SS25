@@ -9,8 +9,13 @@
     <!-- <% include header.ejs %> -->
 </head>
 <body>
-    <h1>Mostviertler Modellbahnhof</h1>
+    <header>
+        <h1>Mostviertler Modellbahnhof</h1>
+
+
+    </header>
     <h2>Termine buchen</h2>
+
     <div id="loginArea" class="modal">
         <h2>Login</h2>
         <form id="loginForm">
@@ -21,15 +26,38 @@
         <p>Noch keinen Account? <a href="#" onclick="showRegister()">Registrieren</a></p>
     </div>
 
-<footer>
+    <div id="registerArea" class="modal hidden">
+        <h2>Registrieren</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Kundennummer" name="kundennr" required>
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="PLZ" name="plz" required>
+            <input type="password" placeholder="Passwort" name="passwort" required>
+            <button type="submit">Registrieren</button>
+        </form>
+        <p>Schon einen Account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <div id="bookingArea" class="hidden">
+        <h2>Willkommen <span id="userName"></span> <button id="logoutBtn">Logout</button></h2>
+        <p>Wähle einen Termin:</p>
+        <table id="slotTable">
+            <thead>
+                <tr><th>Zeit</th><th>Aktion</th></tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <footer>
 
         <div class="legal-links">
             <a href="https://www.mostviertler-modellbahnhof.at/kontaktimpressum/" target="_blank" rel="noopener noreferrer">Impressum</a>
             <a href="https://www.mostviertler-modellbahnhof.at/datenschutzerklaerung/" target="_blank" rel="noopener noreferrer">Datenschutz</a>
         </div>
 
-</footer>
+    </footer>
 
-
+    <script src="main.js"></script>
 </body>
 </html>

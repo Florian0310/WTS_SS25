@@ -41,4 +41,26 @@ footer .legal-links a {
     margin: 0 8px;
     text-decoration: none;
     color: inherit;
+
 }
+
+#slotTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+#slotTable th, #slotTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+#slotTable button { cursor: pointer; }
+
+.available { background: lightgreen; }
+.booked { background: salmon; }
+.mine { background: lightblue; }
+
+@media (max-width: 600px) {
+    body { margin: 10px; }
+    .modal { max-width: 100%; }
+}
+

@@ -1,4 +1,3 @@
-// Kleines Studentenprojekt - nicht perfekt, aber hoffentlich hilfreich
 const express = require('express');
 const session = require('express-session');
 const sqlite3 = require('sqlite3').verbose();
@@ -62,7 +61,7 @@ loadSlots();
 // Mails versenden (hier nur Demo-Konfiguration)
 function sendMail(to, subject, text) {
   const transporter = nodemailer.createTransport({
-    // hier könnt ihr euren SMTP-Server eintragen
+    // hier SMTP-Server eintragen
     host: 'localhost',
     port: 25,
     tls: { rejectUnauthorized: false }

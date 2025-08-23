@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('registerForm').addEventListener('submit', register);
     document.getElementById('logoutBtn').addEventListener('click', logout);
     loadSlots();
-});å
+});
 
 function showRegister() {
     document.getElementById('loginArea').classList.add('hidden');
